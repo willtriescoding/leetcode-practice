@@ -1,0 +1,2 @@
+sets only stores data values but only once, no repeats. 
+good for checking if something is already there and filting duplicates
