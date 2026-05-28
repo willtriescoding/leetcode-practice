@@ -1,12 +1,10 @@
 class Solution(object):
     def containsDuplicate(self, nums):
         
-        ##store first number, store second number, if first and second are not the same then move up 1 index and repeat until either duplicate is found or none are found
-        for i in range(len(nums)):
-            num1 = nums[i]
-            for j in range(i+1, len(nums)):
-                num2 = nums[j]
-                if num1 == num2:
-                    return True
+        #check if number is in set and then add into it with all the numbers, if number is seen then return true else false
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
         return False
-        
